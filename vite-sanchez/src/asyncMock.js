@@ -5,7 +5,7 @@
   { id: "4", name: "Aceite CBD 20%", price: 1400, category: "aceites", description: "Aceite de CBD al 20%", stock: 4 },
   { id: "5", name: "Aceite CBD 30%", price: 980, category: "aceites", description: "Aceite de CBD al 30%", stock: 2 },
   { id: "6", name: "Raw Single Wide Classic", price: 1700, category: "papeles y filtros", description: "Papel clasico 70mm", stock: 1 },
-  { id: "7", name: "Raw Black King Size Slim", price: 870, category: "papel y filtros", description: "Papel negro 70mm", stock:3 },
+  { id: "7", name: "Raw Black King Size Slim", price: 870, category: "papeles y filtros", description: "Papel negro 70mm", stock:3 },
   { id: "8", name: "Raw Classic Tips", price: 1400, category: "papeles y filtros", description: "Librillo clasico de filtros Raw", stock: 3 },
   { id: "9", name: "bandeja Rick & morty", price: 1150, category: "otros", description: "Bandeja metalica con diseño de Rick & Morty", stock: 2 },
   { id: "10", name: "Grinder Pokeball", price: 600, category: "otros", description: "Picador plastico con diseño de pokebola", stock: 6 },
@@ -17,7 +17,7 @@
       if (products.length > 0) {
         setTimeout(() => {
           resolve(products);
-        }, 2000);
+        }, 1000);
       } else {
         reject("No hay productos");
       }
@@ -28,13 +28,10 @@
     return new Promise((resolve, reject) => {
       if (products.length > 0) {
         const product = products.find( p => p.id === id);
-
-        setTimeout(() => {
           if(!product) {
             reject(`No se encuentra el productos con el id ${id}`)
           }
           resolve(product);
-        }, 2000);
       } else {
         reject("No hay productos");
       }

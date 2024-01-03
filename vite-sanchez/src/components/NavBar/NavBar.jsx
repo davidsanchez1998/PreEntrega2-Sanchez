@@ -2,7 +2,7 @@
 import { Link } from "react-router-dom";
 import { CartWidget } from "../CartWidget/CartWidget";
 
-export const NavBar = () => {
+export const NavBar = ({productsInCartQuantity}) => {
   return (
     <nav className="d-flex justify-content-around p-4">
     <figure>
@@ -28,7 +28,7 @@ export const NavBar = () => {
         </Link>
       </div>
       <Link to="/Cart">
-        <CartWidget />
+        <CartWidget productsInCartQuantity={productsInCartQuantity}/>
       </Link>
     </nav>
   );

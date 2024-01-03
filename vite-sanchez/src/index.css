@@ -54,3 +54,86 @@ figcaption {
 .cart-right > img {
    margin: right;
 }
+
+.cart-container {
+   width: 80%;
+   margin: 0 auto;
+   padding: 20px;
+   border: 1px solid #ccc;
+   border-radius: 5px;
+   background-color: #f9f9f9;
+ }
+ 
+ .products-list {
+   list-style: none;
+   padding: 0;
+ }
+ 
+ .product {
+   display: flex;
+   margin-bottom: 20px;
+   border: 1px solid #ddd;
+   padding: 10px;
+   border-radius: 5px;
+ }
+ 
+ .product-image {
+   width: 100px;
+   height: 100px;
+   object-fit: cover;
+   margin-right: 20px;
+   border-radius: 5px;
+ }
+ 
+ .product-info {
+   flex: 1;
+ }
+
+ .checkout-container {
+   width: 80%;
+   margin: 0 auto;
+   padding: 20px;
+   border: 1px solid #ccc;
+   border-radius: 5px;
+   background-color: #f9f9f9;
+ }
+ 
+ .products-container {
+   margin-bottom: 20px;
+ }
+  
+ .products-list-checkout {
+   list-style: none;
+   padding: 0;
+ }
+ 
+ .product-checkout {
+   margin-bottom: 10px;
+ }
+ 
+ .total-order {
+   font-weight: bold;
+   font-size: 18px;
+ }
+ 
+ .form {
+   display: flex;
+   flex-direction: column;
+   max-width: 400px;
+   margin: 0 auto;
+ }
+ 
+ input[type="text"],
+ input[type="tel"],
+ input[type="email"] {
+   width: 100%;
+   padding: 8px;
+   margin-bottom: 10px;
+   border: 1px solid #ccc;
+   border-radius: 4px;
+ }
+
+ .email-error {
+   color: red;
+   font-weight: 600;
+ }

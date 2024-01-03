@@ -3,12 +3,12 @@ import { useEffect, useState } from "react";
 import { getProducts } from "../../asyncMock";
 import { ItemList } from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
+import { useProducts } from "../../hooks/useProducts";
 
 export const ItemListContainer = () => {
-  const { category } = useParams();
-
-  const [products, setProducts] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const {products, setProducts} = useProducts()
+  const { category } = useParams();
 
 
   useEffect(() => {

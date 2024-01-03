@@ -1,10 +1,17 @@
 
 import { ItemCount } from "../ItemCount/ItemCount";
 
-export const ItemDetail = ({ description, img, price, stock }) => {
+export const ItemDetail = ({ name, id, description, img, price, stock, addProductToCart }) => {
 
-    const onAdd = (items) => {
-        alert(`Se agregaron ${items} al carrito`)
+    const onAdd = (quantity) => {
+      const productToBeAdded = {
+        id,
+        name,
+        description,
+        price,
+        quantity,
+      }
+      addProductToCart(productToBeAdded)
       }
 
   return (
